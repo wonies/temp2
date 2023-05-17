@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/17 19:35:35 by wonhshin          #+#    #+#             */
+/*   Updated: 2023/05/17 19:35:47 by wonhshin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	print_error(int err)
@@ -6,17 +18,4 @@ int	print_error(int err)
 		write(2, "Error\n", 6);
 	exit(1);
 	return (-1);
-}
-
-void print_list(t_node **head)
-{
-    t_node *temp;
-
-	temp = *head;
-	while (temp != NULL)
-    {
-        printf("%d ", temp->value);
-        temp = temp->next;
-    }
-    printf("\n");
 }
