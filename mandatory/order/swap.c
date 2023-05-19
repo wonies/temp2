@@ -6,7 +6,7 @@
 /*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:55 by wonhshin          #+#    #+#             */
-/*   Updated: 2023/05/17 19:37:14 by wonhshin         ###   ########.fr       */
+/*   Updated: 2023/05/18 21:53:11 by wonhshin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	sa(t_node **a, int flag)
 {
-    t_node  *tmp;
+	t_node	*tmp;
 
 	if ((*a) && (*a)->next)
 	{
 		tmp = (*a)->next;
-        (*a)->next = tmp->next;
-        tmp->next = *a;
-        *a = tmp;
+		(*a)->next = tmp->next;
+		tmp->next = *a;
+		*a = tmp;
 	}
 	if (flag == 1)
 		write(1, "sa\n", 3);
@@ -29,16 +29,15 @@ void	sa(t_node **a, int flag)
 
 void	sb(t_node **b, int flag)
 {
-    t_node  *tmp;
+	t_node	*tmp;
 
 	if ((*b) && (*b)->next)
 	{
 		tmp = (*b)->next;
-        (*b)->next = tmp->next;
-        tmp->next = *b;
-        *b = tmp;
-
-    }
+		(*b)->next = tmp->next;
+		tmp->next = *b;
+		*b = tmp;
+	}
 	if (flag == 1)
 		write(1, "sb\n", 3);
 }

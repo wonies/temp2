@@ -6,7 +6,7 @@
 /*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:53 by wonhshin          #+#    #+#             */
-/*   Updated: 2023/05/17 19:37:34 by wonhshin         ###   ########.fr       */
+/*   Updated: 2023/05/18 21:55:09 by wonhshin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ra(t_node **head, int flag)
 	tail->next = *head;
 	*head = (*head)->next;
 	tail->next->next = NULL;
-    if (flag == 1)
-	    write(1, "ra\n", 3);
+	if (flag == 1)
+		write(1, "ra\n", 3);
 }
 
 void	rb(t_node **head, int flag)
@@ -40,16 +40,16 @@ void	rb(t_node **head, int flag)
 	tail->next = *head;
 	*head = (*head)->next;
 	tail->next->next = NULL;
-    if (flag == 1)
-	    write(1, "rb\n", 3);
+	if (flag == 1)
+		write(1, "rb\n", 3);
 }
 
 void	rr(t_node **a, t_node **b, int flag)
 {
 	ra(a, 0);
 	rb(b, 0);
-    if (flag == 1)
-	    write(1, "rr\n", 3);
+	if (flag == 1)
+		write(1, "rr\n", 3);
 }
 
 void	rra(t_node **a, int flag)
@@ -68,8 +68,8 @@ void	rra(t_node **a, int flag)
 	temp->next = NULL;
 	head->next = *a;
 	*a = head;
-    if (flag == 1)
-	    write(1, "rra\n", 4);
+	if (flag == 1)
+		write(1, "rra\n", 4);
 }
 
 void	rrb(t_node **b, int flag)
@@ -88,6 +88,6 @@ void	rrb(t_node **b, int flag)
 	temp->next = NULL;
 	head->next = *b;
 	*b = head;
-    if (flag == 1)
-	    write(1, "rrb\n", 4);
+	if (flag == 1)
+		write(1, "rrb\n", 4);
 }

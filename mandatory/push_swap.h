@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/18 21:56:29 by wonhshin          #+#    #+#             */
+/*   Updated: 2023/05/18 21:56:42 by wonhshin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -86,7 +98,5 @@ void	sort_b(t_node **a, t_node **b, int size);
 void	b_order(t_node **b, int size);
 int		find_order(t_node **b, int size, int len);
 void	ft_lstclear(t_node **lst);
-
-void print_list(t_node **head);
 
 #endif

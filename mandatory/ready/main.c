@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/18 22:05:32 by wonhshin          #+#    #+#             */
+/*   Updated: 2023/05/18 22:05:59 by wonhshin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
-void leaks()
-{
-	system("leaks push_swap");
-}
+// void leaks()
+// {
+// 	system("leaks push_swap");
+// }
 
 int	main(int ac, char **av)
 {
@@ -11,9 +23,7 @@ int	main(int ac, char **av)
 	t_node	*b;
 	t_info	info;
 	char	**get;
-	// t_node  *temp;
-	
-	atexit(leaks);
+	// atexit(leaks);
 	a = NULL;
 	b = NULL;
 	get = NULL;
@@ -22,29 +32,7 @@ int	main(int ac, char **av)
 	get = parsing(&a, ac, av);
 	if (!get)
 		return (0);
-	// pushswap_start(a, b, &info);
-	// temp = a;
-	// print_list(&temp);
-	// pb(&a, &b, 1);
-	// rra(&a, 1);
-	// pa(&a, &b, 1);
-	// temp = a;
-	// while (temp)
-	// {
-	// 	printf("%d ", temp->value);
-	// 	temp = temp->next;
-	// }
 	pushswap_start(&a, &b, &info);
-	//  printf("push_swap complete\n");
-	// print_list(&temp);
-	// temp = a;
-	// while (temp)
-	// {
-	// 	printf("%d ", temp->value);
-	// 	temp = temp->next;
-	// }
-	// printf("push_swap complete\n");
-	// print_list(&a);
 	ft_lstclear(&a);
 	ft_lstclear(&b);
 }

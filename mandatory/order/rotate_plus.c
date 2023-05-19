@@ -6,7 +6,7 @@
 /*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:51 by wonhshin          #+#    #+#             */
-/*   Updated: 2023/05/17 19:36:51 by wonhshin         ###   ########.fr       */
+/*   Updated: 2023/05/18 21:55:46 by wonhshin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	rrr(t_node **a, t_node **b, int flag)
 {
 	rra(a, 0);
 	rrb(b, 0);
-    if (flag == 1)
-	    write(1, "rrr\n", 4);
+	if (flag == 1)
+		write(1, "rrr\n", 4);
 }

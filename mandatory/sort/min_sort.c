@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   min_sort.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/18 21:49:32 by wonhshin          #+#    #+#             */
+/*   Updated: 2023/05/18 21:50:02 by wonhshin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	three_times(t_node **a)
@@ -11,28 +23,17 @@ void	three_times(t_node **a)
 	{
 		sa(a, 1);
 		ra(a, 1);
-		// print_list(a);
 	}
 	else if (temp->order < (*a)->order && (*a)->order < last->order)
-	{
 		sa(a, 1);
-		//print_list(a);
-	}
 	else if ((*a)->order < temp->order && (*a)->order > last->order)
-	{
 		rra(a, 1);
-		//print_list(a);
-	}
 	else if ((*a)->order > last->order && temp->order < last->order)
-	{
 		ra(a, 1);
-		//print_list(a);
-	}
 	else if ((*a)->order > temp->order && temp->order > last->order)
 	{
 		sa(a, 1);
 		rra(a, 1);
-		//print_list(a);
 	}
 }
 

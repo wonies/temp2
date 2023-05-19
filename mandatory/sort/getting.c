@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   getting.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/18 21:50:21 by wonhshin          #+#    #+#             */
+/*   Updated: 2023/05/18 21:50:42 by wonhshin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	create_chunk(t_node **a, t_info *info)
@@ -27,19 +39,11 @@ void	get_chunk(t_node **a, t_node **b, t_info *info)
 	chunk = create_chunk(a, info);
 	get_order(a, info);
 	if (chunk == -114)
-	{
 		handmade_count(a, b, size);
-        // printf("last a : \n");
-		// print_list(a);
-        // ft_lstclear(a);
-        return ;
-	}
 	else
 	{
 		put_sort(a, b, size, chunk);
 		sort_b(a, b, size);
-        // ft_lstclear(a);
-        // ft_lstclear(b);
 	}
 }
 
