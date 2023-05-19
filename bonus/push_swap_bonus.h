@@ -1,16 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wonhshin <wonhshin@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/19 00:16:39 by wonhshin          #+#    #+#             */
+/*   Updated: 2023/05/19 00:22:19 by wonhshin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_BONUS_H
 # define PUSH_SWAP_BONUS_H
 
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
 # include "../mandatory/push_swap.h"
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 
 /* bonus_init */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -27,10 +34,8 @@ char	*size_is_zero(char **data, int idx);
 char	*read_buf(int fd, char **data, char *buf, int size);
 char	*get_next_line(int fd);
 
-/* read_gnl */
-// int 	order_command(t_node **a);
-void    process_commads(t_node **a, t_node **b, int size);
-int     check_command(char *line, t_node **a, t_node **b);
-
+/* bonus_start */
+void	process_commads(t_node **a, t_node **b, int size);
+int		check_command(char *line, t_node **a, t_node **b);
 
 #endif
